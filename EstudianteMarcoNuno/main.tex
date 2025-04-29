@@ -1,0 +1,79 @@
+
+\documentclass[pdf,
+%8pt, 9pt, 10pt, 11pt, 12pt, 14pt, 17pt, 20pt
+serif,
+%handout,	% remove overlays
+compress,
+xcolor=table,
+dvipsnames,
+spanish,
+aspectratio=169]{beamer}
+
+\usepackage[algosection,lined]{algorithm2e}
+\usepackage{minted}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage{todonotes}
+\tcbuselibrary{minted}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
+%% Encoding, fonts, language
+%\input{settings/pdflatex_setup}
+\usepackage{graphics}
+\usepackage{url}
+\usepackage{amsmath,amssymb,amsfonts,marvosym}
+\usepackage{ulem}			% to cross out text
+\usepackage{subfig}			% to cross out text
+\normalem
+\usepackage{ragged2e}
+\let\raggedright=\RaggedRight
+%\input{settings/beamer_setup}
+%\input{settings/biblatex_setup2.tex}
+
+\usepackage{datetime}
+\newdateformat{specialdate}{\twodigit{\THEDAY}-\twodigit{\THEMONTH}-\THEYEAR}
+%\newdateformat{specialdate}{\twodigit{\THEDAY}-\THEYEAR}
+\date{\specialdate\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\title[\arabic{page} ]{Advanced Computer Graphics}
+\title[Arrays]{Jetpack Compose Tutorial}
+% Sin subtitulos
+\subtitle[short]{Mobile Programming}
+% Corchetes: Solo apellidos de los integrantes, Llaves: Los nombres completos!!
+\author[-]{Marco Aurelio Nuño-Maganda, Ph. D}
+\institute[UPV]{Polytechnic University of Victoria}
+%\date[]{May-August 2024}
+%\logo{\pgfimage[width=1cm,height=1cm]{graphics/logo_upv_transparente}}			% Logo on all slides (pdf,png,jpg,eps)
+%\titlegraphic{\includegraphics[height=1.5cm]{graphics/logo_upv_transparente} \hfil \includegraphics[height=1.8cm]{graphics/c++.png}}	% Logo on title slide
+%\titlegraphic{\includegraphics[height=1.5cm]{graphics/logo_upv_transparente} \hfill  \includegraphics[height=1.5cm]{graphics/kotlin.png}}	% Logo on title slide
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SLIDES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuracion para dibujar AUTOMATAS
+\usepackage{tikz}
+\usetikzlibrary{shadows,arrows.meta}
+\usetikzlibrary{shadows,positioning,arrows}
+
+\tikzset{parent/.style={align=center,text width=2cm,fill=green!20,rounded corners=2pt},
+    child/.style={align=center,text width=2.8cm,fill=green!50,rounded corners=6pt},
+    grandchild/.style={fill=pink!50,text width=2.3cm}
+}
+\usetikzlibrary{automata, positioning, arrows}
+
+
+\renewcommand{\rutaImagenes}{imgs}
+\begin{document}
+
+\input{slides.tex}
+
+\end{document}
+
